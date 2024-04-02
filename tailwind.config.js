@@ -7,10 +7,30 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: {
+          100: '#add1ff',
+          200: '#44c5fe',
+          600: '#368eff',
+        },
+				dark: {
+					900: '#424656'
+				}
+      },
+			keyframes: {
+        slidein: {
+          from: {
+            opacity: "0",
+            transform: "translateY(-2px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        slidein: "slidein 600ms forwards",
       },
     },
   },

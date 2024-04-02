@@ -1,0 +1,40 @@
+{
+	"Temperature": [
+		{
+			"id": 1,
+			"displayShort": "°F",
+			"displayLong": "Fahrenheit",
+			"value": "fahrenheit"
+		},
+		{
+			"id": 2,
+			"displayShort": "°C",
+			"displayLong": "Celsius",
+			"value": "celsius"
+		}
+	],
+	"Wind": [
+		{
+			"id": 1,
+			"displayShort": "Km/h",
+			"displayLong": "Km/h",
+			"tooltip": "km/h",
+			"value": "kmh"
+			
+		},
+		{
+			"id": 2,
+			"displayShort": "Mph",
+			"displayLong": "Mph",
+			"tooltip": "mph",
+			"value": "mph"
+		},
+		{
+			"id": 3,
+			"displayShort": "Knots",
+			"displayLong": "Knots",
+			"tooltip": "knots",
+			"value": "kn"
+		}
+	]
+}
