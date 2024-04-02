@@ -51,7 +51,10 @@ export default function SearchCityResults({
   if (searchCityError) {
     return (
       <SearchCityDropdown {...dropdownProps} cityList={[]}>
-        <div className="p-4 text-red-600">An error occurred</div>
+        <div className="p-4 text-red-600">
+          Problem connecting. Please check your internet connection and try
+          again.{" "}
+        </div>
       </SearchCityDropdown>
     );
   }

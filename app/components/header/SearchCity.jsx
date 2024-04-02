@@ -42,19 +42,26 @@ export default function SearchCity({ dateRef }) {
   };
 
   const handleDebouncedFetch = useCallback(async (value) => {
-    const response = await fetchCity(value);
-    setIsSearching(false);
-    if (response === "error") {
+    try {
+      const response = await fetchCity(value);
+      setIsSearching(false);
+      if (response === "error") {
+        setSearchCityError(true);
+        setShowSearchCityhResults(true);
+      }
+
+      if (response?.props) {
+        setSuggestions(response.props.suggestions);
+        setShowSearchCityhResults(true);
+      } else {
+        setSuggestions([]);
+        setShowSearchCityhResults(false);
+      }
+    } catch (e) {
+      setIsSearching(false);
       setSearchCityError(true);
       setShowSearchCityhResults(true);
-    }
-
-    if (response?.props) {
-      setSuggestions(response.props.suggestions);
-      setShowSearchCityhResults(true);
-    } else {
-      setSuggestions([]);
-      setShowSearchCityhResults(false);
+      console.error("An error occurred: ", e);
     }
   }, []);
 
