@@ -9,15 +9,15 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          100: '#add1ff',
-          200: '#44c5fe',
-          600: '#368eff',
+          100: "#add1ff",
+          200: "#44c5fe",
+          600: "#368eff",
         },
-				dark: {
-					900: '#424656'
-				}
+        dark: {
+          900: "#424656",
+        },
       },
-			keyframes: {
+      keyframes: {
         slidein: {
           from: {
             opacity: "0",
